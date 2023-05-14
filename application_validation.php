@@ -158,7 +158,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     //Display errors if there are any
     if(empty($errors)){
-        header("Location:" . "http://" . $_SERVER["HTTP_HOST"] . "/application_success.php");
+        header("Location: application_success.php");
     }
     else {
         foreach($errors as $err) {

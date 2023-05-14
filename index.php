@@ -9,7 +9,9 @@
 </head>
 <body>
     <h1>Log in</h1>
-    
+    <div class="error-message">
+        <p><?php if (isset($_GET['err']) && $_GET['err'] == '1') echo 'Username or password incorrect. Please try again.';?></h3>
+    </div>
     <!-- Log in Form -->
     <form id="log-in" action="login.php" method="post">
         <div class="form-field">
@@ -24,7 +26,7 @@
                 Password
             </label>
 
-            <input name="password" type="text" id="password">
+            <input name="password" type="password" id="password">
         </div>
         <input type="submit" value="Log in"></input>
     </form>

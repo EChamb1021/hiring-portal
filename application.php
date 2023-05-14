@@ -388,8 +388,8 @@
             <label for="work-eligibility" id="work-eligibility">
                 Are you eligible to work in Canada?
             </label>
-            <input type="radio" id="work-eligibility-yes" name="work-eligibility" value="Yes" <?php if (isset($_POST["work-eligibility"]) && $_POST["work-eligibility"]=="Yes") echo "checked";?>>Yes</input>
-            <input type="radio" id="work-eligibility-no" name="work-eligibility" value="No" <?php if (isset($_POST["work-eligibility"]) && $_POST["work-eligibility"]=="No") echo "checked";?>>No</input>
+            <input type="radio" id="work-eligibility-yes" name="work-eligibility" value="Yes" checked>Yes</input>
+            <input type="radio" id="work-eligibility-no" name="work-eligibility" value="No">No</input>
         </div>
         <div class="form-field">
             <label for="comment">
