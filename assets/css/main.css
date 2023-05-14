@@ -54,5 +54,9 @@ input[type="submit"] {
   margin-top: 50px;
   margin-bottom: 20px; }
 
+.required:after {
+  content: " *";
+  color: red; }
+
 .error-message p {
   color: red; }

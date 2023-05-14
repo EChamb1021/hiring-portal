@@ -61,6 +61,11 @@ input[type="submit"] {
     margin-bottom: 20px;
 }
 
+.required:after {
+    content:" *";
+    color: red;
+  }
+
 .error-message{
 
     p {

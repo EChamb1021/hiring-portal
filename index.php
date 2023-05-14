@@ -14,49 +14,49 @@
     <!-- Survey Form -->
     <form id="application" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
         <div class="form-field">
-            <label for="first-name" id="first-name-label">
+            <label for="first-name" id="first-name-label" class="required">
                 First Name
             </label>
 
             <input name="first-name" type="text" id="first-name" value="<?php echo isset($_POST['first-name'])? $_POST['first-name']:''; ?>">
         </div>
         <div class="form-field">
-            <label for="last-name" id="last-name-label">
+            <label for="last-name" id="last-name-label" class="required">
                 Last Name
             </label>
 
             <input name="last-name" type="text" id="last-name" value="<?php echo isset($_POST['last-name'])? $_POST['last-name']:''; ?>">
         </div>
         <div class="form-field">
-            <label for="email" id="email-label">
+            <label for="email" id="email-label" class="required">
                 Email
             </label>
 
             <input name="email" type="text" id="email" value="<?php echo isset($_POST['email'])? $_POST['email']:''; ?>">
         </div>
         <div class="form-field">
-            <label for="phone" id="phone">
+            <label for="phone" id="phone" class="required">
                 Phone
             </label>
 
             <input name="phone" type="text" id="phone" value="<?php echo isset($_POST['phone'])? $_POST['phone']:''; ?>">
         </div>
         <div class="form-field">
-            <label for="address" id="address">
+            <label for="address" id="address" class="required">
                 Address
             </label>
 
             <input name="address" type="text" id="address" value="<?php echo isset($_POST['address'])? $_POST['address']:''; ?>">
         </div>
         <div class="form-field">
-            <label for="city" id="city">
+            <label for="city" id="city" class="required">
                 City
             </label>
 
             <input name="city" type="text" id="city" value="<?php echo isset($_POST['city'])? $_POST['city']:''; ?>"">
         </div>
         <div class="form-field">
-            <label for="province" id="province">
+            <label for="province" id="province" class="required">
                 Province
             </label>
 
@@ -75,7 +75,7 @@
             </select>
         </div>
         <div class="form-field">
-            <label for="country" id="country">
+            <label for="country" id="country" class="required">
                 Country
             </label>
             <select name="country" id="country">
@@ -336,14 +336,21 @@
         </div>
         <hr>
         <div class="form-field">
-            <label for="resume" id="resume">
+            <label for="cv" id="cv" class="required">
+                CV
+            </label>
+
+            <input name="cv" type="file" id="cv" value="<?php echo isset($_POST['cv'])? $_POST['cv']:''; ?>">
+        </div>
+        <div class="form-field">
+            <label for="resume" id="resume" class="required">
                 Resume
             </label>
 
             <input name="resume" type="file" id="resume" value="<?php echo isset($_POST['resume'])? $_POST['resume']:''; ?>">
         </div>
         <div class="form-field">
-            <label for="start-date" id="start-date">
+            <label for="start-date" id="start-date" class="required">
                 Start Date
             </label>
 
@@ -371,7 +378,7 @@
             <input name="linkedin" type="text" id="linkedin" value="<?php echo isset($_POST['linkedin'])? $_POST['linkedin']:''; ?>">
         </div>
         <div class="form-field">
-            <label for="experience" id="experience">
+            <label for="experience" id="experience" class="required">
                 Years of Experience
             </label>
 

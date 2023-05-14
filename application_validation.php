@@ -10,6 +10,7 @@ $address = "";
 $city = "";
 $provinces = "";
 $country = "";
+$cv = '';
 $resume = "";
 $start_date = "";
 $salary = "";
@@ -86,8 +87,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         array_push($errors, "Country field is required.");
     }
 
-    //Resume Validation
+    //CV Validation
     $allowed_file_types = array('pdf', 'docx', 'doc');
+    $extension = pathinfo($_POST['cv'], PATHINFO_EXTENSION);
+
+    if(empty($_POST['cv'])){
+        array_push($errors, "CV is required.");
+    }
+    else if (!in_array($extension, $allowed_file_types)){
+        array_push($errors, "CV must be in pdf, docx, or doc format.");
+    }
+    else {
+        $cv = sanitize_input($_POST['cv']);
+    }
+
+    //Resume Validation
     $extension = pathinfo($_POST['resume'], PATHINFO_EXTENSION);
 
     if(empty($_POST['resume'])){
@@ -97,7 +111,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         array_push($errors, "Resume must be in pdf, docx, or doc format.");
     }
     else {
-        $resume = sanitize_input($_POST['phone']);
+        $resume = sanitize_input($_POST['resume']);
+    }
+
+    //Start date validation
+    if(empty($_POST['start-date'])){
+        array_push($errors, "Start date must be provided.");
     }
 
     //Salary Validation
