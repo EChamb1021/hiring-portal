@@ -1,0 +1,14 @@
+{
+  "name": "job_portal",
+  "version": "1.0.0",
+  "description": "PHP job portal project",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w sass/ -o assets/css/ --recursive"
+  },
+  "author": "Evan Chambers",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^8.0.0"
+  }
+}
