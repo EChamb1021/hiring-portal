@@ -18,6 +18,8 @@ if(!$user){
     header("Location: index.php?err=1");
 }
 else{
+    session_start();
+    $_SESSION['user'] = $user['username'];
     header("Location: application.php");
 }
 

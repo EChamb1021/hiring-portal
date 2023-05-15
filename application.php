@@ -9,8 +9,16 @@
 </head>
 <body>
     <?php include 'application_validation.php' ?>
+    <?php session_start(); ?>
+    <?php if(!isset($_SESSION['user'])) header("Location: index.php") ?>
+    <!-- Log out -->
+    <h3 class="welcome-message">
+        <?php echo "Welcome " . $_SESSION['user'] . "!"; ?>
+    </h3>
+    <form id="logout" method="post" action="logout.php">
+        <input type="submit" value="Log out"/>
+    </form>
     <h1>Job Application</h1>
-    
     <!-- Survey Form -->
     <form id="application" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
         <div class="form-field">
